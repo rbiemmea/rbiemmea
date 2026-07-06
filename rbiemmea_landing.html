@@ -1,0 +1,2367 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="page.title">R.BIEMMEA S.r.l. — Corileto di Qualità</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPCEtLSBiYWNrZ3JvdW5kIGNpcmNsZSAtLT4KICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzBmMTgwYSIvPgogIDwhLS0gdHJ1bmsgLS0+CiAgPHJlY3QgeD0iMTQuNSIgeT0iMjEiIHdpZHRoPSIzIiBoZWlnaHQ9IjYiIHJ4PSIxIiBmaWxsPSIjZThiODRiIiBvcGFjaXR5PSIwLjkiLz4KICA8IS0tIGdyb3VuZCBsaW5lIC0tPgogIDxyZWN0IHg9IjkiIHk9IjI2LjUiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxLjUiIHJ4PSIwLjc1IiBmaWxsPSIjNGE3YzIwIiBvcGFjaXR5PSIwLjYiLz4KICA8IS0tIGNhbm9weSBsYXllcnMg4oCUIGJvdHRvbSB3aWRlIC0tPgogIDxlbGxpcHNlIGN4PSIxNiIgY3k9IjIwIiByeD0iOSIgcnk9IjQuNSIgZmlsbD0iIzJkNWExMCIvPgogIDwhLS0gbWlkIGxheWVyIC0tPgogIDxlbGxpcHNlIGN4PSIxNiIgY3k9IjE2LjUiIHJ4PSI3LjUiIHJ5PSI1IiBmaWxsPSIjM2Q3MzE4Ii8+CiAgPCEtLSB1cHBlciBsYXllciAtLT4KICA8ZWxsaXBzZSBjeD0iMTYiIGN5PSIxMyIgcng9IjYiIHJ5PSI0LjUiIGZpbGw9IiM0YThjMWUiLz4KICA8IS0tIHRvcCB0dWZ0IC0tPgogIDxlbGxpcHNlIGN4PSIxNiIgY3k9IjkuNSIgcng9IjQiIHJ5PSIzLjUiIGZpbGw9IiM1ZWE2MjUiLz4KICA8IS0tIGhpZ2hsaWdodCBkb3Qgb24gY2Fub3B5IC0tPgogIDxlbGxpcHNlIGN4PSIxMy41IiBjeT0iOC41IiByeD0iMS4yIiByeT0iMC45IiBmaWxsPSIjN2VjODMyIiBvcGFjaXR5PSIwLjU1Ii8+CiAgPCEtLSBnb2xkIGhpZ2hsaWdodCBkb3RzIChoYXplbG51dHMpIC0tPgogIDxjaXJjbGUgY3g9IjEyIiBjeT0iMTcuNSIgcj0iMSIgZmlsbD0iI2U4Yjg0YiIgb3BhY2l0eT0iMC43Ii8+CiAgPGNpcmNsZSBjeD0iMTkuNSIgY3k9IjE2IiByPSIwLjgiIGZpbGw9IiNlOGI4NGIiIG9wYWNpdHk9IjAuNiIvPgogIDxjaXJjbGUgY3g9IjE1IiBjeT0iMjAuNSIgcj0iMC43IiBmaWxsPSIjZThiODRiIiBvcGFjaXR5PSIwLjUiLz4KPC9zdmc+">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-deep:   #122109;
+    --green-forest: #2d4f14;
+    --green-mid:    #4a7c20;
+    --green-bright: #6aa832;
+    --green-pale:   #c8e6a0;
+    --cream:        #f6f2ea;
+    --cream-dark:   #ece4d2;
+    --gold:         #c8961a;
+    --gold-light:   #e8b84b;
+    --brown:        #5c3a1e;
+    --text-dark:    #18180f;
+    --text-mid:     #3d3d2a;
+
+    --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    letter-spacing: -0.011em;
+  }
+
+  ::selection { background: var(--gold); color: var(--green-deep); }
+
+  /* ─── SCROLL PROGRESS ─── */
+  .scroll-progress {
+    display: none;
+  }
+
+  /* ─── NOISE TEXTURE OVERLAY ─── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100svh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 32%, rgba(74,124,32,0.34) 0%, transparent 68%),
+      radial-gradient(ellipse 50% 50% at 50% 78%, rgba(200,150,26,0.14) 0%, transparent 62%),
+      linear-gradient(180deg, #0c1707 0%, #122109 45%, #0a1305 100%);
+  }
+
+  /* 3D canvas */
+  #tree-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* atmosphere + vignette above canvas */
+  .hero-atmos {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 45%, transparent 40%, rgba(8,15,5,0.55) 100%),
+      radial-gradient(circle at 50% 120%, rgba(200,150,26,0.10), transparent 55%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: 0 32px;
+    max-width: 880px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* soft scrim behind text for legibility */
+  .hero-content::before {
+    content: '';
+    position: absolute;
+    inset: -8% -12%;
+    background: radial-gradient(ellipse 55% 60% at 50% 50%, rgba(8,14,5,0.72) 0%, rgba(8,14,5,0.32) 45%, transparent 75%);
+    filter: blur(20px);
+    z-index: -1;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.9s var(--ease) forwards 0.25s;
+  }
+
+  .hero-title {
+    font-family: var(--font-sans);
+    font-size: clamp(3.4rem, 9vw, 8rem);
+    font-weight: 700;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    color: var(--cream);
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeUp 1s var(--ease) forwards 0.4s;
+  }
+
+  .hero-title em {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--green-pale);
+    display: block;
+    font-size: 0.46em;
+    margin-top: 0.15em;
+  }
+
+  .hero-subtitle {
+    font-family: var(--font-serif);
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(245,240,232,0.78);
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeUp 1s var(--ease) forwards 0.55s;
+  }
+
+  .hero-divider {
+    width: 54px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeUp 1s var(--ease) forwards 0.65s;
+  }
+
+  .hero-desc {
+    font-family: var(--font-sans);
+    font-size: clamp(1rem, 1.3vw, 1.12rem);
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgba(245,240,232,0.82);
+    max-width: 520px;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeUp 1s var(--ease) forwards 0.75s;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--gold);
+    color: var(--green-deep);
+    padding: 17px 38px;
+    border-radius: 100px;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease), background 0.3s ease;
+    box-shadow: 0 8px 30px -8px rgba(200,150,26,0.5);
+    opacity: 0;
+    animation: fadeUp 1s var(--ease) forwards 0.9s;
+    will-change: transform;
+  }
+
+  .hero-cta:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 44px -10px rgba(232,184,75,0.6);
+  }
+
+  .hero-cta svg { transition: transform 0.4s var(--ease); }
+  .hero-cta:hover svg { transform: translateX(5px); }
+
+  /* hero stat strip */
+  .hero-stats {
+    display: flex;
+    gap: clamp(24px, 5vw, 60px);
+    margin-top: 52px;
+    opacity: 0;
+    animation: fadeUp 1s var(--ease) forwards 1.05s;
+  }
+
+  .hero-stat { text-align: center; }
+
+  .hero-stat-val {
+    font-family: var(--font-sans);
+    font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: var(--gold-light);
+    display: block;
+    line-height: 1;
+  }
+
+  .hero-stat-lbl {
+    font-family: var(--font-sans);
+    font-size: 0.66rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: rgba(245,240,232,0.5);
+    text-transform: uppercase;
+    margin-top: 8px;
+    display: block;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 900;
+    padding: 22px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: none;
+  }
+
+  nav.scrolled {
+    background: transparent;
+  }
+
+  .nav-logo {
+    font-family: var(--font-sans);
+    font-size: 1.18rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--green-bright);
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .nav-logo:hover { opacity: 0.8; transition: opacity 0.3s ease; }
+
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links a {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: rgba(245,240,232,0.72);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -6px;
+    width: 100%; height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s var(--ease);
+  }
+
+  .nav-links a:hover { color: var(--cream); }
+  .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
+
+  /* ─── SECTION COMMON ─── */
+  section { position: relative; }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .section-tag {
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-tag::before {
+    display: none;
+  }
+
+  /* ─── ABOUT ─── */
+  #chi-siamo {
+    background: var(--cream);
+    padding: 150px 0;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 100px;
+    align-items: center;
+  }
+
+  .about-heading {
+    font-family: var(--font-sans);
+    font-size: clamp(2.6rem, 4vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+    color: var(--green-deep);
+    margin-bottom: 30px;
+  }
+
+  .about-heading em {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--green-mid);
+  }
+
+  .about-text {
+    font-size: 1.06rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+    margin-bottom: 22px;
+  }
+
+  .about-location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--green-mid);
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--green-pale);
+  }
+
+  .about-right { position: relative; }
+
+  .about-photo-frame {
+    background: var(--green-forest);
+    aspect-ratio: 3/4;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 30px 80px -30px rgba(18,33,9,0.55);
+  }
+
+  .about-photo-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, var(--green-forest) 0%, var(--green-deep) 100%);
+  }
+
+  .photo-placeholder-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: rgba(200,230,160,0.45);
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-style: italic;
+    letter-spacing: 0.06em;
+  }
+
+  .photo-placeholder-icon {
+    font-size: 3.6rem;
+    display: block;
+    margin-bottom: 12px;
+    opacity: 0.35;
+  }
+
+  .about-photo-frame::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 40%;
+    background: linear-gradient(transparent, rgba(18,33,9,0.55));
+  }
+
+  .about-accent {
+    position: absolute;
+    top: -20px; right: -20px;
+    width: 120px; height: 120px;
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    opacity: 0.45;
+    z-index: -1;
+  }
+
+  /* ─── NUMERI ─── */
+  #numeri {
+    background: var(--green-deep);
+    padding: 110px 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #numeri::before {
+    content: 'CORILETO';
+    position: absolute;
+    font-family: var(--font-sans);
+    font-size: 18vw;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: rgba(255,255,255,0.022);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .numeri-heading {
+    font-family: var(--font-sans);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    color: var(--cream);
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(106,168,50,0.14);
+    border: 1px solid rgba(106,168,50,0.14);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+  }
+
+  .stat-card {
+    padding: 54px 32px;
+    background: var(--green-deep);
+    text-align: center;
+    transition: background 0.4s var(--ease);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.5s var(--ease);
+    transform-origin: left;
+  }
+
+  .stat-card:hover { background: rgba(74,124,32,0.16); }
+  .stat-card:hover::before { transform: scaleX(1); }
+
+  .stat-number {
+    font-family: var(--font-sans);
+    font-size: 3.4rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--green-bright);
+    display: block;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-unit {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--gold);
+  }
+
+  .stat-label {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: rgba(245,240,232,0.55);
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-top: 6px;
+    display: block;
+  }
+
+  /* ─── TIMELINE ─── */
+  #storia {
+    background: var(--cream);
+    padding: 150px 0;
+    overflow: hidden;
+  }
+
+  .timeline-heading {
+    font-family: var(--font-sans);
+    font-size: clamp(2.3rem, 3.5vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--green-deep);
+    margin-bottom: 80px;
+  }
+
+  .timeline { position: relative; }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 140px;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--green-mid), var(--gold), transparent);
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 60px;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-24px);
+    transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+  }
+
+  .timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .timeline-year {
+    font-family: var(--font-sans);
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--green-mid);
+    text-align: right;
+    padding-top: 32px;
+    position: relative;
+  }
+
+  .timeline-year::after {
+    content: '';
+    position: absolute;
+    right: -67px;
+    top: 42px;
+    width: 13px; height: 13px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 3px solid var(--cream-dark);
+    z-index: 2;
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  }
+
+  .timeline-item:hover .timeline-year::after {
+    transform: scale(1.35);
+    box-shadow: 0 0 0 6px rgba(200,150,26,0.15);
+  }
+
+  .timeline-card {
+    background: white;
+    padding: 38px 46px;
+    border-radius: 8px;
+    border-left: 3px solid var(--green-mid);
+    margin-bottom: 22px;
+    position: relative;
+    box-shadow: 0 4px 30px rgba(18,33,9,0.06);
+    transition: box-shadow 0.45s var(--ease), transform 0.45s var(--ease);
+  }
+
+  .timeline-card:hover {
+    box-shadow: 0 18px 60px rgba(18,33,9,0.13);
+    transform: translateX(8px);
+  }
+
+  .timeline-card-title {
+    font-family: var(--font-sans);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--green-deep);
+    margin-bottom: 12px;
+  }
+
+  .timeline-card-text {
+    font-size: 1.04rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+  }
+
+  .timeline-card-pill {
+    display: inline-block;
+    background: var(--green-pale);
+    color: var(--green-forest);
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-family: var(--font-sans);
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .timeline-future .timeline-card {
+    border-left-color: var(--gold);
+    background: linear-gradient(135deg, #fffdf5, white);
+  }
+
+  .timeline-future .timeline-year { color: var(--gold); }
+
+  /* ─── QUALITA ─── */
+  #qualita {
+    background: var(--green-deep);
+    padding: 150px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .qualita-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .qualita-heading {
+    font-family: var(--font-sans);
+    font-size: clamp(2.3rem, 3.5vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--cream);
+    margin-bottom: 30px;
+    line-height: 1.08;
+  }
+
+  .qualita-heading em {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--gold-light);
+  }
+
+  .qualita-text {
+    font-size: 1.06rem;
+    line-height: 1.78;
+    color: rgba(245,240,232,0.76);
+    margin-bottom: 20px;
+  }
+
+  .qualita-features {
+    display: grid;
+    gap: 14px;
+  }
+
+  .feat-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 26px 30px;
+    background: rgba(74,124,32,0.12);
+    border: 1px solid rgba(106,168,50,0.14);
+    border-radius: 8px;
+    transition: background 0.4s var(--ease), transform 0.4s var(--ease), border-color 0.4s var(--ease);
+    cursor: default;
+    transform-style: preserve-3d;
+  }
+
+  .feat-item:hover {
+    background: rgba(74,124,32,0.2);
+    border-color: rgba(106,168,50,0.3);
+  }
+
+  .feat-icon {
+    font-size: 1.7rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .feat-title {
+    font-family: var(--font-sans);
+    font-size: 1.08rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--cream);
+    margin-bottom: 6px;
+  }
+
+  .feat-desc {
+    font-size: 0.96rem;
+    color: rgba(245,240,232,0.62);
+    line-height: 1.65;
+  }
+
+  /* ─── OBIETTIVI ─── */
+  #obiettivi {
+    background: var(--cream);
+    padding: 150px 0;
+  }
+
+  .obiettivi-intro {
+    max-width: 700px;
+    margin: 0 auto 80px;
+    text-align: center;
+  }
+
+  .obiettivi-intro .section-tag { justify-content: center; }
+
+  .obiettivi-heading {
+    font-family: var(--font-sans);
+    font-size: clamp(2.3rem, 3.5vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--green-deep);
+    margin-bottom: 22px;
+    line-height: 1.08;
+  }
+
+  .obiettivi-subtext {
+    font-size: 1.12rem;
+    line-height: 1.7;
+    color: var(--text-mid);
+  }
+
+  .obiettivi-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .obiettivo-card {
+    padding: 54px 46px;
+    background: white;
+    border-radius: 10px;
+    border-bottom: 3px solid var(--green-mid);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(18,33,9,0.05);
+    transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease);
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+
+  .obiettivo-card:hover {
+    box-shadow: 0 26px 70px rgba(18,33,9,0.14);
+  }
+
+  .obiettivo-card.gold-accent { border-bottom-color: var(--gold); }
+
+  .obiettivo-card::before {
+    content: attr(data-num);
+    position: absolute;
+    top: -18px; right: 30px;
+    font-family: var(--font-sans);
+    font-size: 7rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    color: rgba(18,33,9,0.045);
+    line-height: 1;
+  }
+
+  .obiettivo-icon {
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  .obiettivo-title {
+    font-family: var(--font-sans);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--green-deep);
+    margin-bottom: 14px;
+    line-height: 1.2;
+  }
+
+  .obiettivo-text {
+    font-size: 1.04rem;
+    line-height: 1.7;
+    color: var(--text-mid);
+  }
+
+  .obiettivo-list {
+    list-style: none;
+    margin-top: 20px;
+  }
+
+  .obiettivo-list li {
+    display: flex;
+    gap: 10px;
+    padding: 9px 0;
+    font-size: 0.98rem;
+    color: var(--text-mid);
+    border-bottom: 1px solid rgba(74,124,32,0.1);
+  }
+
+  /* Arrows removed — list items now plain text */
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--green-deep);
+    padding: 70px 0 44px;
+    text-align: center;
+    border-top: 1px solid rgba(106,168,50,0.18);
+  }
+
+  .footer-name {
+    font-family: var(--font-sans);
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--cream);
+    margin-bottom: 8px;
+  }
+
+  .footer-addr {
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    font-style: italic;
+    letter-spacing: 0.04em;
+    color: rgba(245,240,232,0.7);
+  }
+
+  .footer-contact {
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .footer-sede-label {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    opacity: 0.85;
+  }
+
+  .footer-sede {
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    font-style: italic;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    color: rgba(245,240,232,0.7);
+    max-width: 540px;
+    padding: 0 20px;
+  }
+
+  .footer-email { margin-top: 6px; }
+  .footer-email a {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--gold-light);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(232,184,75,0.35);
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+  .footer-email a:hover {
+    color: var(--cream);
+    border-bottom-color: rgba(245,240,232,0.5);
+  }
+
+  .footer-meta {
+    margin-top: 32px;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: rgba(245,240,232,0.6);
+  }
+
+  .footer-meta p { margin-bottom: 8px; }
+  .footer-meta .tagline { color: rgba(245,240,232,0.4); font-style: italic; font-family: var(--font-serif); font-size: 0.92rem; letter-spacing: 0.08em; }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(42px);
+    filter: blur(6px);
+    transition: opacity 1s var(--ease-expo), transform 1s var(--ease-expo), filter 1s var(--ease-expo);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ─── SCROLL INDICATOR ─── */
+  .scroll-hint {
+    display: none;
+  }
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: rgba(245,240,232,0.45);
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    z-index: 3;
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards 1.8s;
+  }
+  @keyframes fadeIn { to { opacity: 1; } }
+
+  .scroll-line {
+    width: 1px;
+    height: 46px;
+    background: linear-gradient(to bottom, rgba(200,150,26,0.7), transparent);
+    animation: scrollPulse 2.2s ease-in-out infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.35; transform: scaleY(0.85); }
+    50% { opacity: 1; transform: scaleY(1.15); }
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    nav.scrolled { padding: 12px 24px; }
+    .nav-links { display: none; }
+    .section-inner { padding: 0 28px; }
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .about-right { display: none; }
+    .stats-row { grid-template-columns: 1fr 1fr; }
+    .qualita-grid { grid-template-columns: 1fr; gap: 50px; }
+    .obiettivi-cards { grid-template-columns: 1fr; }
+    .timeline::before { left: 80px; }
+    .timeline-item { grid-template-columns: 80px 1fr; gap: 32px; }
+    .timeline-year { font-size: 1.35rem; }
+    .timeline-year::after { right: -39px; }
+    .timeline-card { padding: 28px 26px; }
+    .hero-stats { flex-wrap: wrap; justify-content: center; gap: 22px 40px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .reveal { opacity: 1; transform: none; filter: none; }
+  }
+
+  /* ─── LANGUAGE TOGGLE ─── */
+  .lang-toggle {
+    position: fixed;
+    bottom: 28px;
+    right: 32px;
+    z-index: 200;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    user-select: none;
+  }
+  .lang-toggle button {
+    background: none;
+    border: none;
+    padding: 4px 2px;
+    cursor: pointer;
+    color: rgba(245,240,232,0.55);
+    font: inherit;
+    letter-spacing: inherit;
+    transition: color 0.3s ease;
+  }
+  .lang-toggle button:hover { color: var(--cream); }
+  .lang-toggle button.active { color: var(--gold); }
+  .lang-toggle .lang-sep {
+    color: rgba(245,240,232,0.28);
+    pointer-events: none;
+  }
+  /* When inside iframe, hide the in-page toggle (the parent controls language) */
+  /* lang-toggle visible in both standalone and in-frame modes */
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ─── NAVIGATION ─── -->
+<nav id="navbar">
+    <button class="nav-logo" id="navLogoBtn">R.<span>BIEMMEA</span></button>
+  <ul class="nav-links">
+    <li><a href="#chi-siamo" data-i18n="nav.azienda">L'Azienda</a></li>
+    <li><a href="#storia" data-i18n="nav.storia">Storia</a></li>
+    <li><a href="#qualita" data-i18n="nav.qualita">Qualità</a></li>
+    <li><a href="#obiettivi" data-i18n="nav.visione">Visione</a></li>
+  </ul>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <canvas id="tree-canvas"></canvas>
+  <div class="hero-atmos"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-i18n="hero.eyebrow">Corileto · Romania · Dal 2019</p>
+    <h1 class="hero-title">
+      R.BIEMMEA
+      <em>Società Agricola S.r.l.</em>
+    </h1>
+    <p class="hero-subtitle" data-i18n="hero.subtitle">Produzione di nocciole di eccellenza</p>
+    <div class="hero-divider"></div>
+    <p class="hero-desc" data-i18n="hero.desc">
+      Un corileto esteso su 70–80 ettari nel cuore della Romania,
+      con oltre 30.000 piante coltivate con passione, tecnica e
+      rispetto profondo per il territorio.
+    </p>
+    <a href="#chi-siamo" class="hero-cta" style="display:none;">
+      <span data-i18n="hero.cta">Scopri l'azienda</span>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-val">30K</span>
+        <span class="hero-stat-lbl" data-i18n="hero.stat.piante">Piante</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-val">70–80</span>
+        <span class="hero-stat-lbl" data-i18n="hero.stat.ettari">Ettari</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-val">~400</span>
+        <span class="hero-stat-lbl" data-i18n="hero.stat.densita">Piante/ettaro</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-val">2019</span>
+        <span class="hero-stat-lbl" data-i18n="hero.stat.primo">Primo impianto</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span data-i18n="hero.scroll">Scorri</span>
+  </div>
+</section>
+
+<!-- ─── CHI SIAMO ─── -->
+<section id="chi-siamo">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div>
+        <p class="section-tag reveal" data-i18n="about.tag">Chi siamo</p>
+        <h2 class="about-heading reveal reveal-delay-1">
+          <span data-i18n="about.heading.1">Radici profonde</span>
+          <em data-i18n="about.heading.2">nella terra romena</em>
+        </h2>
+        <p class="about-text reveal reveal-delay-2" data-i18n="about.text.1">
+          R.BIEMMEA S.r.l. è un'azienda agricola specializzata nella coltivazione
+          del nocciolo, con sede lungo la Strada Ghiroda, in Romania.
+          Nata dalla visione di valorizzare le risorse naturali di un territorio
+          straordinariamente fertile, l'azienda unisce competenza agronomica,
+          cura artigianale e spirito imprenditoriale.
+        </p>
+        <p class="about-text reveal reveal-delay-3">
+          <span data-i18n="about.text.2.before">I nostri corileti si estendono su oltre 70 ettari, con 30.000 piante
+          selezionate tra varietà da impollinazione e da produzione.
+          La varietà </span><strong data-i18n="about.text.2.strong">Giffoni</strong><span data-i18n="about.text.2.after"> — la più pregiata d'Italia — è il
+          cuore della nostra produzione.</span>
+        </p>
+        <div class="about-location reveal reveal-delay-4">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8 1.5C5.51 1.5 3.5 3.51 3.5 6c0 3.75 4.5 8.5 4.5 8.5S12.5 9.75 12.5 6c0-2.49-2.01-4.5-4.5-4.5zm0 6.1c-.89 0-1.6-.71-1.6-1.6s.71-1.6 1.6-1.6 1.6.71 1.6 1.6-.71 1.6-1.6 1.6z" fill="currentColor"/>
+          </svg>
+          <span data-i18n="about.location">Strada Ghiroda, Romania</span>
+        </div>
+      </div>
+      <div class="about-right reveal reveal-delay-2" style="display:none;">
+        <div class="about-photo-frame">
+          <div class="photo-placeholder-text">
+            <span class="photo-placeholder-icon">🌿</span>
+            <span data-i18n-html="about.photo">Fotografia<br>del corileto</span>
+          </div>
+        </div>
+        <div class="about-accent"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── NUMERI ─── -->
+<section id="numeri">
+  <div class="section-inner">
+    <p class="section-tag reveal" style="color:var(--gold-light); justify-content:center; margin-bottom:16px;" data-i18n="numeri.tag">
+      I Numeri
+    </p>
+    <h2 class="numeri-heading reveal" data-i18n="numeri.heading">Il nostro corileto in cifre</h2>
+    <div class="stats-row reveal">
+      <div class="stat-card">
+        <span class="stat-number">30<span class="stat-unit">K</span></span>
+        <span class="stat-label" data-i18n="numeri.lab.piante">Piante coltivate</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">70–80<span class="stat-unit">ha</span></span>
+        <span class="stat-label" data-i18n="numeri.lab.ettari">Ettari di corileto</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">~400</span>
+        <span class="stat-label" data-i18n="numeri.lab.densita">Piante per ettaro</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">5<span class="stat-unit">×5m</span></span>
+        <span class="stat-label" data-i18n="numeri.lab.spazio">Spaziatura tra le piante</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── STORIA / TIMELINE ─── -->
+<section id="storia">
+  <div class="section-inner">
+    <p class="section-tag reveal" data-i18n="storia.tag">La nostra storia</p>
+    <h2 class="timeline-heading reveal" data-i18n="storia.heading">Cresciamo anno dopo anno</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">2019</div>
+        <div class="timeline-card">
+          <span class="timeline-card-pill" data-i18n="storia.2019.pill">Primo impianto</span>
+          <h3 class="timeline-card-title" data-i18n="storia.2019.title">Le prime radici</h3>
+          <p class="timeline-card-text">
+            <span data-i18n="storia.2019.text.before">A novembre 2019 vengono piantati i </span><strong data-i18n="storia.2019.text.strong">primi 27 ettari</strong><span data-i18n="storia.2019.text.after"> — circa 27.000 m² di terreno — che segnano la nascita del progetto.
+            Le piante scelte con cura, disposte a 5×5 metri, danno vita a
+            quello che diventerà uno dei corileti più estesi della Romania.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2022</div>
+        <div class="timeline-card">
+          <span class="timeline-card-pill" data-i18n="storia.2022.pill">Grande espansione</span>
+          <h3 class="timeline-card-title" data-i18n="storia.2022.title">Il grande salto</h3>
+          <p class="timeline-card-text">
+            <span data-i18n="storia.2022.text.before">Tra gennaio e marzo 2022 vengono impiantati altri </span><strong data-i18n="storia.2022.text.strong">~40 ettari</strong><span data-i18n="storia.2022.text.after">,
+            più che raddoppiando la superficie del corileto. La visione si consolida:
+            R.BIEMMEA diventa uno dei produttori di nocciole più significativi
+            della regione.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2025</div>
+        <div class="timeline-card">
+          <span class="timeline-card-pill" data-i18n="storia.2025.pill">Nuovi ettari</span>
+          <h3 class="timeline-card-title" data-i18n="storia.2025.title">Consolidamento e crescita</h3>
+          <p class="timeline-card-text">
+            <span data-i18n="storia.2025.text.before">Nel 2025 vengono completati ulteriori </span><strong data-i18n="storia.2025.text.strong">~10 ettari</strong><span data-i18n="storia.2025.text.after"> di impianto,
+            portando il totale a 70–80 ettari con circa 30.000 piante.
+            L'azienda perfeziona i processi di coltivazione e si prepara
+            alla prima grande produzione commerciale.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item timeline-future">
+        <div class="timeline-year">2026</div>
+        <div class="timeline-card">
+          <span class="timeline-card-pill" style="background:#fff8e7; color:#8b6200;" data-i18n="storia.2026.pill">Prossimo passo</span>
+          <h3 class="timeline-card-title" data-i18n="storia.2026.title">Il futuro è già in cantiere</h3>
+          <p class="timeline-card-text">
+            <span data-i18n="storia.2026.text.before">In inverno 2026 è previsto l'impianto di altri </span><strong data-i18n="storia.2026.text.strong">3–4 ettari</strong><span data-i18n="storia.2026.text.after">,
+            mentre parallelamente partono i progetti tecnologici: tracciamento
+            AI della filiera e il programma di compensazione ambientale.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── QUALITÀ ─── -->
+<section id="qualita">
+  <div class="section-inner">
+    <div class="qualita-grid">
+      <div>
+        <p class="section-tag reveal" style="color:var(--gold-light);" data-i18n="qual.tag">
+          Le nostre piante
+        </p>
+        <h2 class="qualita-heading reveal">
+          <span data-i18n="qual.heading.1">Varietà pregiate,</span><br><em data-i18n="qual.heading.2">una molteplicità di eccellenze</em>
+        </h2>
+        <p class="qualita-text reveal reveal-delay-1" data-i18n="qual.text.1">
+          I nostri noccioleti ospitano un'accurata selezione di varietà
+          per massimizzare la produzione e la qualità. Ogni varietà è stata scelta
+          con cura per garantire una resa superiore e caratteristiche organolettiche
+          distintive. Le piante da produzione sono affiancate da impollinatori strategici
+          che assicurano la fertilità dell'intero impianto.
+        </p>
+        <p class="qualita-text reveal reveal-delay-2" data-i18n="qual.text.2">
+          La nostra diversificazione varietale rappresenta un vantaggio competitivo
+          straordinario: garantisce stabilità produttiva, consente di rispondere
+          alle esigenze specifiche di diversi mercati, e offre la massima flessibilità
+          commerciale. Ciascuna varietà ha caratteristiche uniche in termini di
+          profilo organolettico, resa e resistenza alle avversità.
+        </p>
+      </div>
+
+      <div class="qualita-features">
+        <div class="feat-item reveal">
+          <div>
+            <p class="feat-title" data-i18n="qual.giffoni.title">Giffoni IGP</p>
+            <p class="feat-desc" data-i18n="qual.giffoni.desc">La regina del nocciolo italiano: guscio fine, straordinaria resa, aroma intenso. La varietà più pregiata per l'industria dolciaria europea.</p>
+          </div>
+        </div>
+        <div class="feat-item reveal reveal-delay-1">
+          <div>
+            <p class="feat-title" data-i18n="qual.romana.title">Romana</p>
+            <p class="feat-desc" data-i18n="qual.romana.desc">Storica varietà italiana, dalle eccellenti caratteristiche organolettiche e buona resa produttiva. Ideale per mercati tradizionali.</p>
+          </div>
+        </div>
+        <div class="feat-item reveal reveal-delay-2">
+          <div>
+            <p class="feat-title" data-i18n="qual.tonda.title">Tonda Gentile</p>
+            <p class="feat-desc" data-i18n="qual.tonda.desc">Varietà di qualità superiore, nota per la forma rotonda e il profilo gustativo complesso. Particolarmente apprezzata nel settore confettiero.</p>
+          </div>
+        </div>
+        <div class="feat-item reveal">
+          <div>
+            <p class="feat-title" data-i18n="qual.francescana.title">Francescana</p>
+            <p class="feat-desc" data-i18n="qual.francescana.desc">Variante della Romana, selezionata per una produttività ancora superiore, mantenendo l'eccellente qualità della linea genetica.</p>
+          </div>
+        </div>
+        <div class="feat-item reveal reveal-delay-1">
+          <div>
+            <p class="feat-title" data-i18n="qual.nocchione.title">Nocchione</p>
+            <p class="feat-desc" data-i18n="qual.nocchione.desc">Varietà impollinatrice essenziale. Garantisce l'impollinazione incrociata delle altre varietà da produzione, assicurando fertilità e rese abbondanti.</p>
+          </div>
+        </div>
+        <div class="feat-item reveal reveal-delay-2">
+          <div>
+            <p class="feat-title" data-i18n="qual.spazio.title">Spaziatura ottimizzata 5×5 m</p>
+            <p class="feat-desc" data-i18n="qual.spazio.desc">~400 piante per ettaro: la densità ideale per massimizzare la resa e facilitare la raccolta meccanizzata di tutte le varietà.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── OBIETTIVI ─── -->
+<section id="obiettivi">
+  <div class="section-inner">
+    <div class="obiettivi-intro">
+      <p class="section-tag reveal" data-i18n="obi.tag">La nostra visione</p>
+      <h2 class="obiettivi-heading reveal"><span data-i18n="obi.heading.1">Innovazione e sostenibilità</span><br><span data-i18n="obi.heading.2">al centro di tutto</span></h2>
+      <p class="obiettivi-subtext reveal reveal-delay-1" data-i18n="obi.subtext">
+        Guardiamo al futuro con ambizione e responsabilità.
+        Tecnologia, tracciabilità e rispetto per l'ambiente
+        sono i pilastri del nostro sviluppo.
+      </p>
+    </div>
+
+    <div class="obiettivi-cards">
+      <div class="obiettivo-card reveal" data-num="01">
+        <span class="obiettivo-icon">🤖</span>
+        <h3 class="obiettivo-title" data-i18n="obi.ai.title">Tracciamento AI della Filiera</h3>
+        <p class="obiettivo-text" data-i18n="obi.ai.text">
+          Svilupperemo un sistema avanzato di tracciamento digitale
+          basato sull'intelligenza artificiale per monitorare ogni fase
+          della nostra produzione in tempo reale.
+        </p>
+        <ul class="obiettivo-list">
+        </ul>
+      </div>
+
+      <div class="obiettivo-card gold-accent reveal reveal-delay-1" data-num="02">
+        <span class="obiettivo-icon">🌱</span>
+        <h3 class="obiettivo-title" data-i18n="obi.eco.title">Compensazione Impatti Ambientali</h3>
+        <p class="obiettivo-text" data-i18n="obi.eco.text">
+          Ci impegniamo a misurare, ridurre e compensare l'impronta
+          ecologica della nostra attività con un programma strutturato
+          e certificato a livello internazionale.
+        </p>
+        <ul class="obiettivo-list">
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="section-inner">
+    <p class="footer-name">R.BIEMMEA S.r.l.</p>
+    <div class="footer-contact">
+      <p class="footer-sede-label" data-i18n="footer.sede.label">Sede operativa</p>
+      <p class="footer-sede">Ticvaniu Mic n.18, Comuna Ticvaniu Mare, Județul Caraș-Severin</p>
+      <p class="footer-email"><a href="mailto:rbiemmea@gmail.com">rbiemmea@gmail.com</a></p>
+    </div>
+    <div class="footer-meta">
+      <p data-i18n="footer.copy">© 2025 R.BIEMMEA S.r.l. — Tutti i diritti riservati</p>
+      <p class="tagline" data-i18n="footer.tag">Qualità · Territorio · Innovazione · Sostenibilità</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* ============================================================
+   3D HAZELNUT TREE — procedural, animated growth + wind
+   ============================================================ */
+(function () {
+  const canvas = document.getElementById('tree-canvas');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!canvas || !window.THREE) return;
+
+  let renderer, scene, camera, treeGroup, particles;
+  const branches = [];
+  const leaves = [];
+  // Esponiamo globalmente per il reset dell'animazione
+  window.__treeBranches = branches;
+  window.__treeLeaves = leaves;
+  let pointer = { x: 0, y: 0 };
+  let target = { x: 0, y: 0 };
+  const clock = new THREE.Clock();
+  window.growthStartTime = null; // esposta globalmente
+
+  // easing
+  const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+  const easeOutExpo = t => (t >= 1 ? 1 : 1 - Math.pow(2, -10 * t));
+  const smoothstep = (a, b, x) => {
+    const t = Math.min(1, Math.max(0, (x - a) / (b - a)));
+    return t * t * (3 - 2 * t);
+  };
+  const rand = (a, b) => a + Math.random() * (b - a);
+
+  try {
+    renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+  } catch (e) {
+    canvas.style.display = 'none';
+    return;
+  }
+  renderer.setClearColor(0x000000, 0);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  scene = new THREE.Scene();
+  scene.fog = new THREE.Fog(0x101f0a, 13, 34);
+
+  camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
+  camera.position.set(0, 2.6, 12.5);
+
+  // ---- lighting ----
+  scene.add(new THREE.HemisphereLight(0xa6dd72, 0x241803, 0.62));
+
+  const keyLight = new THREE.DirectionalLight(0xffe7b3, 1.2);
+  keyLight.position.set(6, 10, 6);
+  scene.add(keyLight);
+
+  const fillLight = new THREE.DirectionalLight(0x4a7c20, 0.55);
+  fillLight.position.set(-8, 4, -5);
+  scene.add(fillLight);
+
+  const warmGlow = new THREE.PointLight(0xe8b84b, 0.7, 32);
+  warmGlow.position.set(0, 6.5, -2);
+  scene.add(warmGlow);
+
+  // ---- shared geometry / materials ----
+  // tapered unit branch: height 1 along +Y, base at origin
+  const branchGeo = new THREE.CylinderGeometry(0.5, 0.86, 1, 8, 1, true);
+  branchGeo.translate(0, 0.5, 0);
+  const branchMat = new THREE.MeshStandardMaterial({
+    color: 0x4b3119, roughness: 0.88, metalness: 0.0
+  });
+
+  // leaf shape
+  function makeLeafGeo() {
+    const s = new THREE.Shape();
+    s.moveTo(0, 0);
+    s.bezierCurveTo(0.20, 0.18, 0.24, 0.62, 0, 1.05);
+    s.bezierCurveTo(-0.24, 0.62, -0.20, 0.18, 0, 0);
+    const g = new THREE.ShapeGeometry(s, 10);
+    g.translate(0, -0.05, 0);
+    return g;
+  }
+  const leafGeo = makeLeafGeo();
+  const leafMats = [
+    new THREE.MeshStandardMaterial({ color: 0x3f6b1e, roughness: 0.66, metalness: 0, side: THREE.DoubleSide, emissive: 0x0c1605 }),
+    new THREE.MeshStandardMaterial({ color: 0x4f8a26, roughness: 0.62, metalness: 0, side: THREE.DoubleSide, emissive: 0x0e1a06 }),
+    new THREE.MeshStandardMaterial({ color: 0x6aa832, roughness: 0.58, metalness: 0, side: THREE.DoubleSide, emissive: 0x10220a }),
+    new THREE.MeshStandardMaterial({ color: 0x87b84a, roughness: 0.55, metalness: 0, side: THREE.DoubleSide, emissive: 0x14260c }),
+    new THREE.MeshStandardMaterial({ color: 0xb78a2a, roughness: 0.5,  metalness: 0.05, side: THREE.DoubleSide, emissive: 0x1c1404 })
+  ];
+
+  const nutGeo = new THREE.SphereGeometry(0.5, 12, 10);
+  const nutMats = [
+    new THREE.MeshStandardMaterial({ color: 0xc8961a, roughness: 0.34, metalness: 0.32, emissive: 0x2a1d04 }),
+    new THREE.MeshStandardMaterial({ color: 0xe8b84b, roughness: 0.3,  metalness: 0.3,  emissive: 0x2e2207 }),
+    new THREE.MeshStandardMaterial({ color: 0x8a5a22, roughness: 0.45, metalness: 0.2,  emissive: 0x180f03 })
+  ];
+
+  treeGroup = new THREE.Group();
+  treeGroup.position.y = -2.4;
+  scene.add(treeGroup);
+
+  // ---- recursive tree builder ----
+  const MAX_DEPTH = 5;
+  const childCounts = [3, 3, 3, 2, 2];
+
+  function addBranch(parentContainer, length, radius, depth, parentDelay) {
+    const pivot = new THREE.Object3D();
+    parentContainer.add(pivot);
+
+    const scaler = new THREE.Object3D();
+    const startY = prefersReduced ? length : 0.0001;
+    scaler.scale.set(radius, startY, radius);
+    pivot.add(scaler);
+    const mesh = new THREE.Mesh(branchGeo, branchMat);
+    scaler.add(mesh);
+
+    // container sits at the branch tip (real units, independent of scaler)
+    const container = new THREE.Object3D();
+    container.position.y = length;
+    container.visible = !!prefersReduced;
+    pivot.add(container);
+
+    const span = rand(0.16, 0.24);
+    const delay = parentDelay;
+
+    const b = {
+      pivot: pivot,
+      scaler: scaler,
+      container: container,
+      length: length,
+      depth: depth,
+      delay: delay,
+      span: span,
+      baseRotX: pivot.rotation.x,
+      baseRotZ: pivot.rotation.z,
+      phase: Math.random() * Math.PI * 2,
+      phase2: Math.random() * Math.PI * 2,
+      swayAmp: 0.018 * Math.pow(1.55, depth),
+      grown: !!prefersReduced
+    };
+    branches.push(b);
+
+    // foliage on outer branches
+    if (depth >= 2) {
+      const leafCount = depth >= 4 ? 6 : (depth >= 3 ? 4 : 2);
+      for (let l = 0; l < leafCount; l++) {
+        const node = new THREE.Object3D();
+        const frac = rand(0.45, 1.0);
+        node.position.set(rand(-0.06, 0.06), length * frac, rand(-0.06, 0.06));
+        node.rotation.set(rand(-1.2, 1.2), rand(0, Math.PI * 2), rand(-1.0, 1.0));
+        const lm = new THREE.Mesh(leafGeo, leafMats[(Math.random() * leafMats.length) | 0]);
+        const base = rand(0.30, 0.46);
+        lm.scale.setScalar(prefersReduced ? base : 0.0001);
+        node.add(lm);
+        pivot.add(node);
+        leaves.push({ mesh: lm, base: base, delay: Math.min(0.92, delay + span + rand(0.02, 0.1)), span: rand(0.12, 0.2) });
+      }
+      // hazelnut clusters
+      if (depth >= 4 && Math.random() < 0.55) {
+        const nutN = 1 + ((Math.random() * 3) | 0);
+        for (let n = 0; n < nutN; n++) {
+          const node = new THREE.Object3D();
+          node.position.set(rand(-0.1, 0.1), length * rand(0.7, 1.0), rand(-0.1, 0.1));
+          const nm = new THREE.Mesh(nutGeo, nutMats[(Math.random() * nutMats.length) | 0]);
+          const base = rand(0.1, 0.15);
+          nm.scale.set(base, base * 0.86, base);
+          if (!prefersReduced) nm.scale.multiplyScalar(0.0001);
+          node.add(nm);
+          pivot.add(node);
+          leaves.push({ mesh: nm, base: base, baseY: base * 0.86, nut: true, delay: Math.min(0.95, delay + span + rand(0.05, 0.14)), span: rand(0.1, 0.18) });
+        }
+      }
+    }
+
+    // recurse
+    if (depth < MAX_DEPTH) {
+      const count = childCounts[depth];
+      const twist = Math.random() * Math.PI * 2;
+      for (let i = 0; i < count; i++) {
+        const childLen = length * rand(0.72, 0.84);
+        const childRad = radius * rand(0.6, 0.7);
+        const childDelay = Math.min(0.7, delay + span * rand(0.8, 1.05));
+
+        const cp = new THREE.Object3D();
+        cp.rotation.order = 'YXZ';
+        cp.rotation.y = twist + (i / count) * Math.PI * 2 + rand(-0.5, 0.5);
+
+        let polar;
+        if (depth === 0) {
+          polar = i === 0 ? rand(0.04, 0.12) : rand(0.32, 0.52);
+        } else {
+          polar = rand(0.42, 0.86);
+        }
+        cp.rotation.x = polar;
+
+        // build child, then re-parent into our tip container with proper transform
+        const childBranch = buildChildBranch(cp, childLen, childRad, depth + 1, childDelay);
+        container.add(cp);
+      }
+    }
+
+    return b;
+  }
+
+  // wrapper so the child's own pivot rotation (cp) is preserved
+  function buildChildBranch(cp, length, radius, depth, delay) {
+    // cp acts as the oriented pivot; replicate addBranch body by attaching to cp
+    return addBranchInto(cp, length, radius, depth, delay);
+  }
+
+  // addBranch expects to CREATE a pivot; here we already have one (cp).
+  // Reuse logic by treating cp as pivot:
+  function addBranchInto(pivot, length, radius, depth, parentDelay) {
+    const scaler = new THREE.Object3D();
+    const startY = prefersReduced ? length : 0.0001;
+    scaler.scale.set(radius, startY, radius);
+    pivot.add(scaler);
+    const mesh = new THREE.Mesh(branchGeo, branchMat);
+    scaler.add(mesh);
+
+    const container = new THREE.Object3D();
+    container.position.y = length;
+    container.visible = !!prefersReduced;
+    pivot.add(container);
+
+    const span = rand(0.16, 0.24);
+    const delay = parentDelay;
+
+    const b = {
+      pivot: pivot, scaler: scaler, container: container,
+      length: length, depth: depth, delay: delay, span: span,
+      baseRotX: pivot.rotation.x, baseRotZ: pivot.rotation.z,
+      phase: Math.random() * Math.PI * 2, phase2: Math.random() * Math.PI * 2,
+      swayAmp: 0.018 * Math.pow(1.55, depth),
+      grown: !!prefersReduced
+    };
+    branches.push(b);
+
+    if (depth >= 3) {
+      const leafCount = depth >= 4 ? 4 : 2;
+      for (let l = 0; l < leafCount; l++) {
+        const node = new THREE.Object3D();
+        const frac = rand(0.45, 1.0);
+        node.position.set(rand(-0.06, 0.06), length * frac, rand(-0.06, 0.06));
+        node.rotation.set(rand(-1.2, 1.2), rand(0, Math.PI * 2), rand(-1.0, 1.0));
+        const lm = new THREE.Mesh(leafGeo, leafMats[(Math.random() * leafMats.length) | 0]);
+        const base = rand(0.30, 0.46);
+        lm.scale.setScalar(prefersReduced ? base : 0.0001);
+        node.add(lm);
+        pivot.add(node);
+        leaves.push({ mesh: lm, base: base, delay: Math.min(0.92, delay + span + rand(0.02, 0.1)), span: rand(0.12, 0.2) });
+      }
+      if (depth >= 4 && Math.random() < 0.42) {
+        const nutN = 1 + ((Math.random() * 3) | 0);
+        for (let n = 0; n < nutN; n++) {
+          const node = new THREE.Object3D();
+          node.position.set(rand(-0.1, 0.1), length * rand(0.7, 1.0), rand(-0.1, 0.1));
+          const nm = new THREE.Mesh(nutGeo, nutMats[(Math.random() * nutMats.length) | 0]);
+          const base = rand(0.1, 0.15);
+          nm.scale.set(base, base * 0.86, base);
+          if (!prefersReduced) nm.scale.multiplyScalar(0.0001);
+          node.add(nm);
+          pivot.add(node);
+          leaves.push({ mesh: nm, base: base, baseY: base * 0.86, nut: true, delay: Math.min(0.95, delay + span + rand(0.05, 0.14)), span: rand(0.1, 0.18) });
+        }
+      }
+    }
+
+    if (depth < MAX_DEPTH) {
+      const count = childCounts[depth];
+      const twist = Math.random() * Math.PI * 2;
+      for (let i = 0; i < count; i++) {
+        const childLen = length * rand(0.72, 0.84);
+        const childRad = radius * rand(0.6, 0.7);
+        const childDelay = Math.min(0.72, delay + span * rand(0.8, 1.05));
+        const cp = new THREE.Object3D();
+        cp.rotation.order = 'YXZ';
+        cp.rotation.y = twist + (i / count) * Math.PI * 2 + rand(-0.5, 0.5);
+        cp.rotation.x = rand(0.42, 0.86);
+        container.add(cp);
+        addBranchInto(cp, childLen, childRad, depth + 1, childDelay);
+      }
+    }
+    return b;
+  }
+
+  // build the trunk
+  (function buildTrunk() {
+    const trunkPivot = new THREE.Object3D();
+    trunkPivot.rotation.z = rand(-0.04, 0.04);
+    treeGroup.add(trunkPivot);
+    addBranchInto(trunkPivot, 3.0, 0.17, 0, 0.0);
+  })();
+
+  // ---- floating motes / pollen ----
+  (function buildParticles() {
+    const N = 280;
+    const geo = new THREE.BufferGeometry();
+    const pos = new Float32Array(N * 3);
+    const speed = new Float32Array(N);
+    for (let i = 0; i < N; i++) {
+      const r = Math.pow(Math.random(), 0.6) * 5.5;
+      const a = Math.random() * Math.PI * 2;
+      pos[i * 3] = Math.cos(a) * r;
+      pos[i * 3 + 1] = rand(-2.5, 7.5);
+      pos[i * 3 + 2] = Math.sin(a) * r * 0.8 - 1;
+      speed[i] = rand(0.05, 0.22);
+    }
+    geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+    const mat = new THREE.PointsMaterial({
+      color: 0xe8c45b, size: 0.055, transparent: true, opacity: 0.0,
+      blending: THREE.AdditiveBlending, depthWrite: false, sizeAttenuation: true
+    });
+    particles = new THREE.Points(geo, mat);
+    particles.userData.speed = speed;
+    scene.add(particles);
+  })();
+
+  // ---- soft ground shadow ----
+  (function groundShadow() {
+    const c = document.createElement('canvas');
+    c.width = c.height = 128;
+    const ctx = c.getContext('2d');
+    const g = ctx.createRadialGradient(64, 64, 4, 64, 64, 64);
+    g.addColorStop(0, 'rgba(0,0,0,0.55)');
+    g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, 128, 128);
+    const tex = new THREE.CanvasTexture(c);
+    const mat = new THREE.MeshBasicMaterial({ map: tex, transparent: true, depthWrite: false });
+    const plane = new THREE.Mesh(new THREE.PlaneGeometry(7, 4.5), mat);
+    plane.rotation.x = -Math.PI / 2;
+    plane.position.y = 0.02;
+    treeGroup.add(plane);
+  })();
+
+  // ---- resize ----
+  function resize() {
+    const w = canvas.clientWidth || window.innerWidth;
+    const h = canvas.clientHeight || window.innerHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  // ---- pointer parallax ----
+  if (!prefersReduced) {
+    window.addEventListener('mousemove', function (e) {
+      target.x = (e.clientX / window.innerWidth - 0.5) * 2;
+      target.y = (e.clientY / window.innerHeight - 0.5) * 2;
+    }, { passive: true });
+  }
+
+  // ---- animation loop ----
+  const GROWTH_DURATION = 2.9;
+
+  function animate() {
+    requestAnimationFrame(animate);
+
+    const t = clock.getElapsedTime();
+
+    // growthT parte da 0 solo quando growthStartTime è impostato
+    const growthT = window.growthStartTime === null ? 0 : Math.max(0, (performance.now() - window.growthStartTime) / 1000);
+
+    // growth progress
+    const growthP = prefersReduced ? 1 : Math.min(1, growthT / GROWTH_DURATION);
+
+    // wind ramps in gently
+    const wind = prefersReduced ? 0.4 : smoothstep(1.0, 3.6, growthT);
+
+    // branches: growth + sway
+    for (let i = 0; i < branches.length; i++) {
+      const b = branches[i];
+      if (!b.grown) {
+        const local = easeOutCubic(Math.min(1, Math.max(0, (growthP - b.delay) / b.span)));
+        b.scaler.scale.y = Math.max(0.0001, local * b.length);
+        b.pivot.visible = local > 0.001;
+        if (local >= 0.999) {
+          b.container.visible = true;
+          b.grown = true;
+          b.scaler.scale.y = b.length;
+        }
+      }
+      // sway (compounds through nesting)
+      if (b.pivot.visible) {
+        const dFactor = b.depth === 0 ? 0.15 : 1;
+        const s = Math.sin(t * 0.7 + b.phase) * b.swayAmp
+                + Math.sin(t * 1.45 + b.phase2) * b.swayAmp * 0.35;
+        b.pivot.rotation.x = b.baseRotX + s * wind * dFactor;
+        b.pivot.rotation.z = b.baseRotZ + Math.cos(t * 0.55 + b.phase) * b.swayAmp * 0.6 * wind * dFactor;
+      }
+    }
+
+    // leaves / nuts grow in
+    if (growthP < 1) {
+      for (let i = 0; i < leaves.length; i++) {
+        const lf = leaves[i];
+        const local = easeOutCubic(Math.min(1, Math.max(0, (growthP - lf.delay) / lf.span)));
+        if (lf.nut) {
+          lf.mesh.scale.set(lf.base * local, (lf.baseY) * local, lf.base * local);
+        } else {
+          lf.mesh.scale.setScalar(Math.max(0.0001, lf.base * local));
+        }
+      }
+    }
+
+    // particles drift up
+    if (particles) {
+      const pos = particles.geometry.attributes.position.array;
+      const sp = particles.userData.speed;
+      const dt = 0.016;
+      for (let i = 0; i < sp.length; i++) {
+        pos[i * 3 + 1] += sp[i] * dt;
+        pos[i * 3] += Math.sin(t * 0.4 + i) * 0.0015;
+        if (pos[i * 3 + 1] > 8) pos[i * 3 + 1] = -2.5;
+      }
+      particles.geometry.attributes.position.needsUpdate = true;
+      particles.material.opacity = 0.5 * smoothstep(1.2, 3.0, t);
+    }
+
+    // tree gentle global sway
+    treeGroup.rotation.y = Math.sin(t * 0.09) * 0.12;
+
+    // camera: intro dolly + parallax + slow drift
+    const introP = prefersReduced ? 1 : easeOutExpo(Math.min(1, t / 3.4));
+    const baseX = Math.sin(t * 0.13) * 0.5;
+    const baseY = 1.7 + introP * 0.9;       // 1.7 -> 2.6
+    const baseZ = 14.5 - introP * 2.0;      // 14.5 -> 12.5
+
+    pointer.x += (target.x - pointer.x) * 0.04;
+    pointer.y += (target.y - pointer.y) * 0.04;
+
+    camera.position.x = baseX + pointer.x * 1.3;
+    camera.position.y = baseY - pointer.y * 0.6;
+    camera.position.z = baseZ;
+    camera.lookAt(0, 2.5, 0);
+
+    renderer.render(scene, camera);
+  }
+  animate();
+})();
+
+/* ============================================================
+   UI INTERACTIONS
+   ============================================================ */
+(function () {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // navbar + scroll progress
+  const navbar = document.getElementById('navbar');
+  const progress = document.getElementById('scrollProgress');
+  function onScroll() {
+    const y = window.scrollY;
+    if (y > 60) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // reveal observer with stagger
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry, idx) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+
+  // timeline items: staggered reveal
+  const tlObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        const items = Array.prototype.slice.call(
+          entry.target.parentElement.querySelectorAll('.timeline-item')
+        );
+        const i = items.indexOf(entry.target);
+        entry.target.style.transitionDelay = (i % 4) * 0.12 + 's';
+        entry.target.classList.add('visible');
+        tlObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.timeline-item').forEach(function (el) { tlObserver.observe(el); });
+
+  // smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      const href = a.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // counter animation
+  function animateCounter(el, targetNum) {
+    const duration = 1700;
+    const start = performance.now();
+    function update(now) {
+      const p = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(targetNum * ease).toLocaleString('it-IT');
+      if (p < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  }
+
+  const statObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        const numEl = entry.target.querySelector('.stat-number');
+        if (numEl && !numEl.dataset.animated) {
+          numEl.dataset.animated = 'true';
+          const text = numEl.textContent.trim();
+          if (text.indexOf('30') === 0) {
+            numEl.innerHTML = '<span id="c1">0</span><span class="stat-unit">K</span>';
+            animateCounter(document.getElementById('c1'), 30);
+          }
+        }
+        statObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.stat-card').forEach(function (el) { statObserver.observe(el); });
+
+  // subtle 3D tilt on cards (pointer-fine devices only)
+  if (!prefersReduced && window.matchMedia('(hover: hover)').matches) {
+    const tiltCards = document.querySelectorAll('.obiettivo-card, .feat-item');
+    tiltCards.forEach(function (card) {
+      card.addEventListener('mousemove', function (e) {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        const py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = 'perspective(900px) rotateX(' + (-py * 5).toFixed(2) +
+          'deg) rotateY(' + (px * 5).toFixed(2) + 'deg) translateY(-6px)';
+      });
+      card.addEventListener('mouseleave', function () {
+        card.style.transform = '';
+      });
+    });
+  }
+})();
+</script>
+
+<script>
+/* ============================================================
+   Start tree animation - always starts on load, resets on message
+   ============================================================ */
+(function () {
+  // Start growing immediately
+  function startGrowth() {
+    window.growthStartTime = performance.now();
+    // Reset rami già cresciuti
+    if (window.__treeBranches) {
+      window.__treeBranches.forEach(b => { b.grown = false; });
+    }
+  }
+
+  // Start immediately
+  startGrowth();
+
+  // Also listen for message from parent (albero.html) to restart animation
+  window.addEventListener('message', (e) => {
+    if (e.data && e.data.type === 'startTreeAnimation') startGrowth();
+  });
+})();
+</script>
+
+
+<script>
+/* ============================================================
+   I18N — language switch (IT / RO)
+   ============================================================ */
+(function () {
+// Translation dictionary for the landing page
+// IT strings preserve original wording exactly.
+const I18N_LANDING = {
+  it: {
+    "page.title": "R.BIEMMEA S.r.l. — Corileto di Qualità",
+    "nav.azienda": "L'Azienda",
+    "nav.storia": "Storia",
+    "nav.qualita": "Qualità",
+    "nav.visione": "Visione",
+
+    "hero.eyebrow": "Corileto · Romania · Dal 2019",
+    "hero.subtitle": "Produzione di nocciole di eccellenza",
+    "hero.desc": "Un corileto esteso su 70–80 ettari nel cuore della Romania, con oltre 30.000 piante coltivate con passione, tecnica e rispetto profondo per il territorio.",
+    "hero.cta": "Scopri l'azienda",
+    "hero.stat.piante": "Piante",
+    "hero.stat.ettari": "Ettari",
+    "hero.stat.densita": "Piante/ettaro",
+    "hero.stat.primo": "Primo impianto",
+    "hero.scroll": "Scorri",
+
+    "about.tag": "Chi siamo",
+    "about.heading.1": "Radici profonde",
+    "about.heading.2": "nella terra romena",
+    "about.text.1": "R.BIEMMEA S.r.l. è un'azienda agricola specializzata nella coltivazione del nocciolo, con sede lungo la Strada Ghiroda, in Romania. Nata dalla visione di valorizzare le risorse naturali di un territorio straordinariamente fertile, l'azienda unisce competenza agronomica, cura artigianale e spirito imprenditoriale.",
+    "about.text.2.before": "I nostri corileti si estendono su oltre 70 ettari, con 30.000 piante selezionate tra varietà da impollinazione e da produzione. La varietà ",
+    "about.text.2.strong": "Giffoni",
+    "about.text.2.after": " — la più pregiata d'Italia — è il cuore della nostra produzione.",
+    "about.location": "Strada Ghiroda, Romania",
+    "about.photo": "Fotografia<br>del corileto",
+
+    "numeri.tag": "I Numeri",
+    "numeri.heading": "Il nostro corileto in cifre",
+    "numeri.lab.piante": "Piante coltivate",
+    "numeri.lab.ettari": "Ettari di corileto",
+    "numeri.lab.densita": "Piante per ettaro",
+    "numeri.lab.spazio": "Spaziatura tra le piante",
+
+    "storia.tag": "La nostra storia",
+    "storia.heading": "Cresciamo anno dopo anno",
+    "storia.2019.pill": "Primo impianto",
+    "storia.2019.title": "Le prime radici",
+    "storia.2019.text.before": "A novembre 2019 vengono piantati i ",
+    "storia.2019.text.strong": "primi 27 ettari",
+    "storia.2019.text.after": " — circa 27.000 m² di terreno — che segnano la nascita del progetto. Le piante scelte con cura, disposte a 5×5 metri, danno vita a quello che diventerà uno dei corileti più estesi della Romania.",
+    "storia.2022.pill": "Grande espansione",
+    "storia.2022.title": "Il grande salto",
+    "storia.2022.text.before": "Tra gennaio e marzo 2022 vengono impiantati altri ",
+    "storia.2022.text.strong": "~40 ettari",
+    "storia.2022.text.after": ", più che raddoppiando la superficie del corileto. La visione si consolida: R.BIEMMEA diventa uno dei produttori di nocciole più significativi della regione.",
+    "storia.2025.pill": "Nuovi ettari",
+    "storia.2025.title": "Consolidamento e crescita",
+    "storia.2025.text.before": "Nel 2025 vengono completati ulteriori ",
+    "storia.2025.text.strong": "~10 ettari",
+    "storia.2025.text.after": " di impianto, portando il totale a 70–80 ettari con circa 30.000 piante. L'azienda perfeziona i processi di coltivazione e si prepara alla prima grande produzione commerciale.",
+    "storia.2026.pill": "Prossimo passo",
+    "storia.2026.title": "Il futuro è già in cantiere",
+    "storia.2026.text.before": "In inverno 2026 è previsto l'impianto di altri ",
+    "storia.2026.text.strong": "3–4 ettari",
+    "storia.2026.text.after": ", mentre parallelamente partono i progetti tecnologici: tracciamento AI della filiera e il programma di compensazione ambientale.",
+
+    "qual.tag": "Le nostre piante",
+    "qual.heading.1": "Varietà pregiate,",
+    "qual.heading.2": "una molteplicità di eccellenze",
+    "qual.text.1": "I nostri noccioleti ospitano un'accurata selezione di varietà per massimizzare la produzione e la qualità. Ogni varietà è stata scelta con cura per garantire una resa superiore e caratteristiche organolettiche distintive. Le piante da produzione sono affiancate da impollinatori strategici che assicurano la fertilità dell'intero impianto.",
+    "qual.text.2": "La nostra diversificazione varietale rappresenta un vantaggio competitivo straordinario: garantisce stabilità produttiva, consente di rispondere alle esigenze specifiche di diversi mercati, e offre la massima flessibilità commerciale. Ciascuna varietà ha caratteristiche uniche in termini di profilo organolettico, resa e resistenza alle avversità.",
+    "qual.giffoni.title": "Giffoni IGP",
+    "qual.giffoni.desc": "La regina del nocciolo italiano: guscio fine, straordinaria resa, aroma intenso. La varietà più pregiata per l'industria dolciaria europea.",
+    "qual.romana.title": "Romana",
+    "qual.romana.desc": "Storica varietà italiana, dalle eccellenti caratteristiche organolettiche e buona resa produttiva. Ideale per mercati tradizionali.",
+    "qual.tonda.title": "Tonda Gentile",
+    "qual.tonda.desc": "Varietà di qualità superiore, nota per la forma rotonda e il profilo gustativo complesso. Particolarmente apprezzata nel settore confettiero.",
+    "qual.francescana.title": "Francescana",
+    "qual.francescana.desc": "Variante della Romana, selezionata per una produttività ancora superiore, mantenendo l'eccellente qualità della linea genetica.",
+    "qual.nocchione.title": "Nocchione",
+    "qual.nocchione.desc": "Varietà impollinatrice essenziale. Garantisce l'impollinazione incrociata delle altre varietà da produzione, assicurando fertilità e rese abbondanti.",
+    "qual.spazio.title": "Spaziatura ottimizzata 5×5 m",
+    "qual.spazio.desc": "~400 piante per ettaro: la densità ideale per massimizzare la resa e facilitare la raccolta meccanizzata di tutte le varietà.",
+
+    "obi.tag": "La nostra visione",
+    "obi.heading.1": "Innovazione e sostenibilità",
+    "obi.heading.2": "al centro di tutto",
+    "obi.subtext": "Guardiamo al futuro con ambizione e responsabilità. Tecnologia, tracciabilità e rispetto per l'ambiente sono i pilastri del nostro sviluppo.",
+    "obi.ai.title": "Tracciamento AI della Filiera",
+    "obi.ai.text": "Svilupperemo un sistema avanzato di tracciamento digitale basato sull'intelligenza artificiale per monitorare ogni fase della nostra produzione in tempo reale.",
+    "obi.ai.li1": "Sensori IoT nei campi per monitoraggio continuo",
+    "obi.ai.li2": "Machine learning per analisi predittiva dei raccolti",
+    "obi.ai.li3": "Blockchain per certificazione dell'origine",
+    "obi.ai.li4": "Dashboard trasparente per clienti e partner",
+    "obi.eco.title": "Compensazione Impatti Ambientali",
+    "obi.eco.text": "Ci impegniamo a misurare, ridurre e compensare l'impronta ecologica della nostra attività con un programma strutturato e certificato a livello internazionale.",
+    "obi.eco.li1": "Calcolo e certificazione carbon footprint",
+    "obi.eco.li2": "Piantumazione di specie arboree autoctone",
+    "obi.eco.li3": "Gestione sostenibile delle risorse idriche",
+    "obi.eco.li4": "Reportistica ESG annuale certificata",
+
+    "footer.addr": "Strada Ghiroda, Romania",
+    "footer.sede.label": "Sede operativa",
+    "footer.copy": "© 2025 R.BIEMMEA S.r.l. — Tutti i diritti riservati",
+    "footer.tag": "Qualità · Territorio · Innovazione · Sostenibilità",
+
+    "frame.back": "Torna all'albero",
+    "frame.back.aria": "Torna all'albero"
+  },
+
+  ro: {
+    "page.title": "R.BIEMMEA S.r.l. — Aluniș de Calitate",
+    "nav.azienda": "Compania",
+    "nav.storia": "Istoric",
+    "nav.qualita": "Calitate",
+    "nav.visione": "Viziune",
+
+    "hero.eyebrow": "Aluniș · România · Din 2019",
+    "hero.subtitle": "Producție de alune de excelență",
+    "hero.desc": "Un aluniș întins pe 70–80 de hectare în inima României, cu peste 30.000 de plante cultivate cu pasiune, tehnică și respect profund pentru teritoriu.",
+    "hero.cta": "Descoperă compania",
+    "hero.stat.piante": "Plante",
+    "hero.stat.ettari": "Hectare",
+    "hero.stat.densita": "Plante/hectar",
+    "hero.stat.primo": "Prima plantare",
+    "hero.scroll": "Derulează",
+
+    "about.tag": "Despre noi",
+    "about.heading.1": "Rădăcini adânci",
+    "about.heading.2": "în pământul românesc",
+    "about.text.1": "R.BIEMMEA S.r.l. este o companie agricolă specializată în cultivarea alunului, cu sediul de-a lungul Străzii Ghiroda, în România. Născută din viziunea de a valorifica resursele naturale ale unui teritoriu extraordinar de fertil, compania îmbină competența agronomică, grija artizanală și spiritul antreprenorial.",
+    "about.text.2.before": "Alunișurile noastre se întind pe peste 70 de hectare, cu 30.000 de plante selectate între soiuri pentru polenizare și pentru producție. Soiul ",
+    "about.text.2.strong": "Giffoni",
+    "about.text.2.after": " — cel mai apreciat din Italia — este inima producției noastre.",
+    "about.location": "Strada Ghiroda, România",
+    "about.photo": "Fotografie<br>a alunișului",
+
+    "numeri.tag": "Cifrele",
+    "numeri.heading": "Alunișul nostru în cifre",
+    "numeri.lab.piante": "Plante cultivate",
+    "numeri.lab.ettari": "Hectare de aluniș",
+    "numeri.lab.densita": "Plante pe hectar",
+    "numeri.lab.spazio": "Distanța dintre plante",
+
+    "storia.tag": "Povestea noastră",
+    "storia.heading": "Creștem an de an",
+    "storia.2019.pill": "Prima plantare",
+    "storia.2019.title": "Primele rădăcini",
+    "storia.2019.text.before": "În noiembrie 2019 sunt plantate ",
+    "storia.2019.text.strong": "primele 27 de hectare",
+    "storia.2019.text.after": " — circa 27.000 m² de teren — care marchează nașterea proiectului. Plantele alese cu grijă, dispuse la 5×5 metri, dau viață celui care va deveni unul dintre cele mai întinse alunișuri din România.",
+    "storia.2022.pill": "Mare expansiune",
+    "storia.2022.title": "Marele salt",
+    "storia.2022.text.before": "Între ianuarie și martie 2022 sunt plantate alte ",
+    "storia.2022.text.strong": "~40 de hectare",
+    "storia.2022.text.after": ", mai mult decât dublând suprafața alunișului. Viziunea se consolidează: R.BIEMMEA devine unul dintre cei mai importanți producători de alune din regiune.",
+    "storia.2025.pill": "Hectare noi",
+    "storia.2025.title": "Consolidare și creștere",
+    "storia.2025.text.before": "În 2025 sunt finalizate încă ",
+    "storia.2025.text.strong": "~10 hectare",
+    "storia.2025.text.after": " de plantație, aducând totalul la 70–80 de hectare cu aproximativ 30.000 de plante. Compania perfecționează procesele de cultivare și se pregătește pentru prima mare producție comercială.",
+    "storia.2026.pill": "Următorul pas",
+    "storia.2026.title": "Viitorul este deja în lucru",
+    "storia.2026.text.before": "În iarna 2026 este prevăzută plantarea a încă ",
+    "storia.2026.text.strong": "3–4 hectare",
+    "storia.2026.text.after": ", iar în paralel demarează proiectele tehnologice: trasabilitate AI a filierei și programul de compensare a impactului asupra mediului.",
+
+    "qual.tag": "Plantele noastre",
+    "qual.heading.1": "Soiuri valoroase,",
+    "qual.heading.2": "o multitudine de excelențe",
+    "qual.text.1": "Alunișurile noastre găzduiesc o selecție atentă de soiuri pentru a maximiza producția și calitatea. Fiecare soi a fost ales cu grijă pentru a garanta un randament superior și caracteristici organoleptice distinctive. Plantele de producție sunt însoțite de polenizatori strategici care asigură fertilitatea întregii plantații.",
+    "qual.text.2": "Diversificarea soiurilor reprezintă un avantaj competitiv extraordinar: garantează stabilitatea producției, permite să răspundem nevoilor specifice ale diferitelor piețe și oferă maximă flexibilitate comercială. Fiecare soi are caracteristici unice în privința profilului organoleptic, randamentului și rezistenței la adversități.",
+    "qual.giffoni.title": "Giffoni IGP",
+    "qual.giffoni.desc": "Regina alunului italian: coajă fină, randament extraordinar, aromă intensă. Soiul cel mai apreciat de industria europeană a dulciurilor.",
+    "qual.romana.title": "Romana",
+    "qual.romana.desc": "Soi italian istoric, cu excelente caracteristici organoleptice și un bun randament productiv. Ideal pentru piețele tradiționale.",
+    "qual.tonda.title": "Tonda Gentile",
+    "qual.tonda.desc": "Soi de calitate superioară, cunoscut pentru forma rotundă și profilul gustativ complex. Apreciat în mod special în sectorul dulciurilor.",
+    "qual.francescana.title": "Francescana",
+    "qual.francescana.desc": "Variantă a soiului Romana, selecționată pentru o productivitate și mai mare, păstrând excelenta calitate a liniei genetice.",
+    "qual.nocchione.title": "Nocchione",
+    "qual.nocchione.desc": "Soi polenizator esențial. Garantează polenizarea încrucișată a celorlalte soiuri de producție, asigurând fertilitate și recolte abundente.",
+    "qual.spazio.title": "Distanță optimizată 5×5 m",
+    "qual.spazio.desc": "~400 de plante pe hectar: densitatea ideală pentru a maximiza randamentul și a facilita recoltarea mecanizată a tuturor soiurilor.",
+
+    "obi.tag": "Viziunea noastră",
+    "obi.heading.1": "Inovație și sustenabilitate",
+    "obi.heading.2": "în centrul a tot",
+    "obi.subtext": "Privim spre viitor cu ambiție și responsabilitate. Tehnologia, trasabilitatea și respectul pentru mediu sunt pilonii dezvoltării noastre.",
+    "obi.ai.title": "Trasabilitate AI a Filierei",
+    "obi.ai.text": "Vom dezvolta un sistem avansat de urmărire digitală bazat pe inteligență artificială pentru a monitoriza fiecare etapă a producției noastre în timp real.",
+    "obi.ai.li1": "Senzori IoT în câmp pentru monitorizare continuă",
+    "obi.ai.li2": "Machine learning pentru analiză predictivă a recoltelor",
+    "obi.ai.li3": "Blockchain pentru certificarea originii",
+    "obi.ai.li4": "Dashboard transparent pentru clienți și parteneri",
+    "obi.eco.title": "Compensarea Impactului asupra Mediului",
+    "obi.eco.text": "Ne angajăm să măsurăm, reducem și compensăm amprenta ecologică a activității noastre printr-un program structurat și certificat la nivel internațional.",
+    "obi.eco.li1": "Calculul și certificarea amprentei de carbon",
+    "obi.eco.li2": "Plantarea de specii arboricole autohtone",
+    "obi.eco.li3": "Gestionarea sustenabilă a resurselor de apă",
+    "obi.eco.li4": "Raportare ESG anuală certificată",
+
+    "footer.addr": "Strada Ghiroda, România",
+    "footer.sede.label": "Sediu operațional",
+    "footer.copy": "© 2025 R.BIEMMEA S.r.l. — Toate drepturile rezervate",
+    "footer.tag": "Calitate · Teritoriu · Inovație · Sustenabilitate",
+
+    "frame.back": "Înapoi la copac",
+    "frame.back.aria": "Înapoi la copac"
+  }
+};
+
+  const STORAGE_KEY = 'rbiemmea_lang';
+  const SUPPORTED = ['it', 'ro'];
+  const DEFAULT_LANG = 'it';
+
+  function getStoredLang() {
+    try {
+      const v = localStorage.getItem(STORAGE_KEY);
+      if (v && SUPPORTED.indexOf(v) !== -1) return v;
+    } catch (e) {}
+    return DEFAULT_LANG;
+  }
+
+  function setStoredLang(lang) {
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+  }
+
+  function applyLanguage(lang) {
+    if (SUPPORTED.indexOf(lang) === -1) lang = DEFAULT_LANG;
+    const dict = I18N_LANDING[lang] || I18N_LANDING[DEFAULT_LANG];
+
+    // Update <html lang="">
+    document.documentElement.setAttribute('lang', lang);
+
+    // Update <title>
+    const titleEl = document.querySelector('title[data-i18n]');
+    if (titleEl) {
+      const k = titleEl.getAttribute('data-i18n');
+      if (dict[k]) titleEl.textContent = dict[k];
+    }
+
+    // Update all data-i18n elements (textContent, safe)
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      if (el.tagName === 'TITLE') return;
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+
+    // Update data-i18n-html (innerHTML, for strings that contain <br> etc.)
+    document.querySelectorAll('[data-i18n-html]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+
+    // Update aria-labels via data-i18n-aria
+    document.querySelectorAll('[data-i18n-aria]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-aria');
+      if (dict[key] !== undefined) el.setAttribute('aria-label', dict[key]);
+    });
+
+    // Update toggle button active state
+    document.querySelectorAll('.lang-toggle button[data-lang]').forEach((b) => {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+
+    window.__currentLang = lang;
+  }
+
+  // Detect if running inside an iframe
+  const inFrame = window.parent !== window;
+  if (inFrame) document.body.classList.add('in-frame');
+
+  // Initial language: from parent (via postMessage), then localStorage, then default
+  let initial = getStoredLang();
+  applyLanguage(initial);
+
+  // Wire toggle buttons
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.lang-toggle button[data-lang]');
+    if (!btn) return;
+    const lang = btn.getAttribute('data-lang');
+    setStoredLang(lang);
+    applyLanguage(lang);
+    // If we have a parent (iframe), notify it
+    try { window.parent.postMessage({ type: 'lang-change', lang: lang }, '*'); } catch (err) {}
+  });
+
+  // Listen for language changes from parent iframe
+  window.addEventListener('message', (e) => {
+    if (!e || !e.data) return;
+    if (e.data.type === 'set-lang' && SUPPORTED.indexOf(e.data.lang) !== -1) {
+      setStoredLang(e.data.lang);
+      applyLanguage(e.data.lang);
+    }
+  });
+
+  // Listen for storage changes (when multiple tabs/frames share localStorage)
+  window.addEventListener('storage', (e) => {
+    if (e.key === STORAGE_KEY && SUPPORTED.indexOf(e.newValue) !== -1) {
+      applyLanguage(e.newValue);
+    }
+  });
+
+  // Expose globally so the frame-back-cue script can also use it
+  window.__applyLanguage = applyLanguage;
+})();
+</script>
+
+<script>
+/* ============================================================
+   Cross-frame nav: logo & footer return to immersive tree
+   ============================================================ */
+(function () {
+  const inFrame = window.parent !== window;
+
+  function backToTree(e) {
+    if (e) e.preventDefault();
+    if (inFrame) {
+      try { window.parent.postMessage({ action: 'back-to-tree' }, '*'); } catch (err) {}
+    } else {
+      window.location.href = 'rbiemmea_albero.html';
+    }
+  }
+
+  // Logo (top-left): scroll to top of landing
+  document.querySelectorAll('.nav-logo').forEach(el => {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // Footer brand name: scroll to top of landing
+  document.querySelectorAll('.footer-name').forEach(el => {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // ESC key inside the iframe → return
+  if (inFrame) {
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') backToTree(e);
+    });
+
+    // small visual cue: a back-to-tree pill in the top-right corner
+    const cue = document.createElement('button');
+    cue.className = 'frame-back-cue';
+    cue.id = 'frameBackCue';
+    cue.setAttribute('aria-label', 'Torna all\'albero');
+    cue.setAttribute('data-i18n-aria', 'frame.back.aria');
+    cue.innerHTML = `
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M7 13L2 8l5-5M2 8h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span data-i18n="frame.back">Torna all'albero</span>
+    `;
+    Object.assign(cue.style, {
+      position: 'fixed', top: '24px', right: '24px', zIndex: '1000',
+      display: 'inline-flex', alignItems: 'center', gap: '8px',
+      padding: '9px 16px',
+      background: 'rgba(26, 46, 13, 0.92)',
+      backdropFilter: 'blur(14px) saturate(1.4)',
+      webkitBackdropFilter: 'blur(14px) saturate(1.4)',
+      border: '1px solid rgba(232,184,75,0.32)',
+      borderRadius: '100px',
+      color: '#f6f2ea',
+      fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif',
+      fontSize: '0.72rem',
+      fontWeight: '500',
+      letterSpacing: '0.08em',
+      cursor: 'pointer',
+      opacity: '0',
+      transform: 'translateY(-6px)',
+      transition: 'opacity 0.5s ease, transform 0.5s ease, background 0.3s ease'
+    });
+    cue.addEventListener('mouseenter', () => {
+      cue.style.background = 'rgba(74,124,32,0.9)';
+      cue.style.transform = 'translateY(-2px)';
+    });
+    cue.addEventListener('mouseleave', () => {
+      cue.style.background = 'rgba(26, 46, 13, 0.92)';
+      cue.style.transform = 'translateY(0)';
+    });
+    cue.addEventListener('click', backToTree);
+    document.body.appendChild(cue);
+    // Apply current language to the freshly created cue
+    if (typeof window.__applyLanguage === 'function') {
+      window.__applyLanguage(window.__currentLang || 'it');
+    }
+    requestAnimationFrame(() => {
+      cue.style.opacity = '1';
+      cue.style.transform = 'translateY(0)';
+    });
+  }
+})();
+</script>
+<!-- ─── LANGUAGE TOGGLE (fixed bottom-centre) ─── -->
+<div class="lang-toggle" id="langToggle" role="group" aria-label="Language">
+  <button type="button" data-lang="it" class="active">IT</button>
+  <span class="lang-sep">|</span>
+  <button type="button" data-lang="ro">RO</button>
+</div>
+
+</body>
+</html>
